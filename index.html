@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Job Listings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <div class="searchBar card">
+      <div class="seachValue">
+      </div>
+      <div class="clear">
+        Clear
+      </div>
+    </div>
+
+    <div class="profileCards">
+      <div class="card profile" id="1">
+        <div class="profile-left">
+          <div class="profile-image">
+            <img src="./images/account.svg" alt="" srcset="">
+          </div>
+          <div class="profile-details">
+            <div class="details-top">
+              <div class="name">Manage</div>
+              <div class="new statusTag">NEW!</div>
+              <div class="featured statusTag">FEATURED</div>
+            </div>
+            <div class="details-mid">
+              <h5 class="role">Senior Front End Developer</h5>
+            </div>
+            <div class="details-bottom">
+              <p class="time">1d ago</p>
+              <div class="bullet">&bull;</div>
+              <p class="type">Full Time</p>
+              <div class="bullet">&bull;</div>
+              <div class="location">USA only</div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-right">
+          <div class="skill-tag">CSS</div>
+          <div class="skill-tag">JS</div>
+          <div class="skill-tag">HTML</div>
+          <div class="deleteBtn">
+            <i class="fa fa-trash"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="addBtn">
+      <i class="fa fa-plus"></i>
+    </div>
+
+    <div class="popup-container" id="jobDetails">
+      <div class="popup-content">
+        <div class="popUpClose">
+          <i class="fa fa-times"></i>
+        </div>
+
+        <div class="popUpTitle">
+          <img src="./images/myhome.svg" alt="Company Logo" width="100">
+          <span>
+            <h2>MyHome Job Details</h2>
+            <span>
+              <div class="new statusTag" id="newTag">NEW!</div>
+              <div class="featured statusTag" id="featuredTag">FEATURED</div>
+            </span>
+          </span>
+        </div>
+
+        <div class="popupTable">
+          <div class="popUpRow">
+            <div class="popUpRowHead">Position</div>
+            <div class="popUpRowData">Junior Frontend Developer</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Role</div>
+            <div class="popUpRowData">Frontend</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Level</div>
+            <div class="popUpRowData">Junior</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Posted</div>
+            <div class="popUpRowData">5 days ago</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Contract</div>
+            <div class="popUpRowData">Contract</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Location</div>
+            <div class="popUpRowData">USA Only</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Languages</div>
+            <div class="popUpRowData">CSS, JavaScript</div>
+          </div>
+
+          <div class="popUpRow">
+            <div class="popUpRowHead">Tools</div>
+            <div class="popUpRowData">None</div>
+          </div>        
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <div class="popup-container" id="addPost">
+      <div class="popup-content">
+        <div class="popUpClose">
+          <i class="fa fa-times"></i>
+        </div>
+
+        <div class="popUpTitle">
+          <h2>Add New Job</h2>
+        </div>
+
+        <div class="error">
+        </div>
+
+        <form id="jobPostingForm">
+          <div class="popupTable">
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="company">Company:</label>
+              </div>
+              <input class="popUpRowData inputData" type="text" id="company" name="company" required><br>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="logo">Logo URL:</label>
+              </div>
+              <input class="popUpRowData inputData" type="text" id="logo" name="logo" required><br>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="new">New:</label>
+              </div>
+              <input class="popUpRowData inputData" type="checkbox" id="new" name="new"><br>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="featured">Featured:</label>
+              </div>
+              <input class="popUpRowData inputData" type="checkbox" id="featured" name="featured"><br>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="position">Position:</label>
+              </div>
+              <input class="popUpRowData inputData" type="text" id="position" name="position" required><br>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="role">Role:</label>
+              </div>
+              <select class="popUpRowData inputData" name="role" id="role" required>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Fullstack">Fullstack</option>
+              </select>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="level">Level:</label>
+              </div>
+              <select class="popUpRowData inputData"id="level" name="level" required>
+                <option value="Junior">Junior</option>
+                <option value="Midweight">Midweight</option>
+                <option value="Senior">Senior</option>
+              </select>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="contract">Contract:</label>
+              </div>
+              <input class="popUpRowData inputData" type="text" id="contract" name="contract" required><br>
+            </div>
+
+            <div class="popupRow inputRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="location">Location:</label>
+              </div>
+              <input class="popUpRowData inputData" type="text" id="location" name="location" required><br>
+            </div>
+
+            
+
+            <div class="popupRow inputRow checkboxRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="languages">Languages:</label>
+              </div>
+              <div class="contentOptions">
+                <input class="popUpRowData firstCheckbox"type="checkbox" id="python" name="languages" value="Python">
+                <label for="python">Python</label>
+                <input class="chk"type="checkbox" id="ruby" name="languages" value="Ruby">
+                <label for="ruby">Ruby</label>
+                <input class="chk"type="checkbox" id="javascript" name="languages" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+                <input class="chk"type="checkbox" id="html" name="languages" value="HTML">
+                <label for="html">HTML</label>
+                <input class="chk"type="checkbox" id="css" name="languages" value="CSS">
+                <label for="css">CSS</label>
+              </div>
+              
+            </div>
+            
+            <div class="popupRow inputRow checkboxRow">
+              <div class="spacing">
+                <label class="popUpRowHead" for="tools">Tools: </label>
+              </div>
+              <div class="contentOptions">
+                <input class="popUpRowData firstCheckbox" type="checkbox" id="react" name="tools" value="React">
+                <label for="react">React</label><br>
+                <input class="chk" type="checkbox" id="sass" name="tools" value="Sass">
+                <label for="sass">Sass</label><br>
+                <input class="chk" type="checkbox" id="vue" name="tools" value="Vue">
+                <label for="vue">Vue</label><br>
+                <input class="chk" type="checkbox" id="django" name="tools" value="Django">
+                <label for="django">Django</label><br>
+                <input class="chk" type="checkbox" id="ror" name="tools" value="Ruby on Rails">
+                <label for="ror">Ruby on Rails</label><br>
+              </div>
+            </div>
+          </div>
+          <input class="submitBtn" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <br><br>
+    </footer>
+
+
+  </body>
+</html>
